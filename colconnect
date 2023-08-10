@@ -41,12 +41,12 @@ while ( <> ) {
   goto LOOP if @G < $o{a} ; # -a で指定した数に満たない場合、continueブロックを実行せずにwhileの先頭へ。
   if ( @G == $o{a} ) { goto LOOP } ; 
 } continue { 
-  $L ++ ; say YELLOW join "\t", @G ; 
+  $L ++ ; say join "\t", @G ; 
   do{ $L ++ ; say '' } if $#F == 0 ; # 空行の処理が2箇所に分かれてトリッキー。
   @G = @F ; 
   @F = () ;
 }
-do { $L ++ ; say GREEN join "\t", @G }  if @G ; 
+do { $L ++ ; say join "\t", @G }  if @G ; 
 
 END{
   my $time_elapsed = sprintf '%.4f', tv_interval ( $time_start , [ gettimeofday ] ) ;
