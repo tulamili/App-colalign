@@ -1,0 +1,10 @@
+
+## INSTALL
+
+cpanm App::colconnect
+
+
+## UNINSTALL 
+
+cpanm -U App::colconnect
+

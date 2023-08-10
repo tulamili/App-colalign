@@ -1,0 +1,30 @@
+This module provides a UNIX-like command `colconnect'. 
+
+ Copyright (c) 2023 Toshiyuki SHIMONO. All rights reserved.
+ This program is free software; you can redistribute it and/or
+ modify it under the same terms as Perl itself.
+
+
+■■ 概要 ■■
+
+このモジュールをインストールすると、コマンド colconnect が使えるようになる。
+
+
+■■ 目的 ■■
+
+
+■■ 利用上の注意点 ■■
+
+
+このコマンドのインストールにより??kB(キロバイト)程度を
+使用するかもしれないが、それらを消去するには cpanm -U によりアンインストールが
+可能である(cpanm でインストールした場合)。
+
+■■ オプションの例 ■■
+
+
+■■ 利用シーンの例 ■■
+
+
+■■ 補足 ■■
+
