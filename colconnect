@@ -31,15 +31,20 @@ while ( <> ) {
   @F = split /$o{i}/o , $_ , -1 ; # 空行が来た場合のことは、まだ考えていない。(!) 
   next if @F == 0 ;  # 空行の処理が2箇所に分かれてトリッキー。
   next if @F == 1 && exists $o{1} && $F[0] =~ m/$o1/o ;
-  if ( @G ) { 
-    splice  @G , -1 , 1 , "$G[$#G]$o{c}$F[0]" , @F[1..$#F] ;
-    push @mL , $L+1 ;
+
+  if ( @G < $o{a} || @F == 1 ) { 
+    if ( @G ) { 
+      splice @G , -1 , 1 , "$G[$#G]$o{c}$F[0]" , @F[1..$#F] ; push @mL , $L+1 ; 
+    } else { 
+      @G = @F ;
+    } 
   } else { 
-    @G = @F 
-  } 
+    next ; # @G == $o{a} が成り立っていた場合である。
+  }
+  
   @F = () ;
   goto LOOP if @G < $o{a} ; # -a で指定した数に満たない場合、continueブロックを実行せずにwhileの先頭へ。
-  if ( @G == $o{a} ) { goto LOOP } ; 
+  goto LOOP if @G == $o{a} ; 
 } continue { 
   $L ++ ; say join "\t", @G ; 
   do{ $L ++ ; say '' } if $#F == 0 ; # 空行の処理が2箇所に分かれてトリッキー。
