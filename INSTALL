@@ -1,10 +1,10 @@
 
 ## INSTALL
 
-cpanm App::colconnect
+cpanm App::colalign
 
 
 ## UNINSTALL 
 
-cpanm -U App::colconnect
+cpanm -U App::colalign
 

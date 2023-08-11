@@ -1,9 +1,9 @@
 use ExtUtils::MakeMaker;
 
 WriteMakefile(
-  NAME => 'App::colconnect',
-  VERSION_FROM => 'colconnect.pm',
-  EXE_FILES => [ 'colconnect' ],
+  NAME => 'App::colalign',
+  VERSION_FROM => 'colalign.pm',
+  EXE_FILES => [ 'colalign' ],
   AUTHOR => 'Toshiyuki SHIMONO (bin4tsv at gmail.com)',
   LICENSE => 'perl_5',
   META_MERGE => {
@@ -11,11 +11,11 @@ WriteMakefile(
        resources => {
            repository => {
                type => 'git',
-               url  => 'https://github.com/tulamili/App-colconnect.git',
-               web  => 'https://github.com/tulamili/App-colconnect',
+               url  => 'https://github.com/tulamili/App-colalign.git',
+               web  => 'https://github.com/tulamili/App-colalign',
            },
            bugtracker => {
-               web => 'https://github.com/tulamili/App-colconnect/issues'
+               web => 'https://github.com/tulamili/App-colalign/issues'
            },
        },
   },
